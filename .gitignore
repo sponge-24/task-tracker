@@ -1,0 +1,52 @@
+# IDE and OS specific files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+### Backend - Maven/Java ###
+
+# Compiled output
+backend/target/
+
+# Maven temporary files
+backend/pom.xml.tag
+backend/pom.xml.releaseBackup
+backend/pom.xml.versionsBackup
+backend/pom.xml.next
+backend/release.properties
+backend/dependency-reduced-pom.xml
+backend/buildNumber.properties
+backend/.mvn/timing.properties
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+### Frontend - Node/Vite/React ###
+
+# Dependencies
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Test coverage
+frontend/coverage/
+
+# Environment variables - do not commit secrets!
+frontend/.env.local
+frontend/.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
