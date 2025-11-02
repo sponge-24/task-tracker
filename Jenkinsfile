@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build & Push Docker Image') {
             steps {
-                withAWS(credentials: 'aws-credentials-for-ecs', region: env.AWS_REGION) {
+                withAWS(credentials: '074bb87f-6764-4d6b-93e6-41d8012063cd', region: env.AWS_REGION) {
                     script {
                         // Build the Docker image
                         sh "docker build -t ${ECR_REPOSITORY_NAME} ."
