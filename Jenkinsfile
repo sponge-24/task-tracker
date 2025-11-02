@@ -40,7 +40,7 @@ pipeline {
 
         stage('Deploy to AWS') {
             steps {
-                withAWS(credentials: '74bb87f-6764-4d6b-93e6-41d8012063cd, region: env.AWS_REGION) {
+                withAWS(credentials: '074bb87f-6764-4d6b-93e6-41d8012063cd', region: env.AWS_REGION) {
                     script {
                         // Make the deploy script executable
                         sh "chmod +x deploy.sh"
