@@ -5,7 +5,7 @@ pipeline {
         AWS_ACCOUNT_ID = "275851867352"
         AWS_REGION = "ap-south-1"
         ECR_REPOSITORY_NAME = "task-tracker"
-        ECS_CLUSTER_NAME = "dramatic-kangaroo-e7louq"
+        ECS_CLUSTER_NAME = "container-cluster"
         ECS_SERVICE_NAME = "container-service"
         ECS_TASK_DEFINITION_NAME = "task-tracker-task"
     }
@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build & Push Docker Image') {
             steps {
-                withAWS(credentials: '074bb87f-6764-4d6b-93e6-41d8012063cd', region: env.AWS_REGION) {
+                withAWS(credentials: 'aws-credentials', region: env.AWS_REGION) {
                     script {
                         // Build the Docker image
                         sh "docker build -t ${ECR_REPOSITORY_NAME} ."
@@ -40,7 +40,7 @@ pipeline {
 
         stage('Deploy to AWS') {
             steps {
-                withAWS(credentials: '074bb87f-6764-4d6b-93e6-41d8012063cd', region: env.AWS_REGION) {
+                withAWS(credentials: 'aws-credentials', region: env.AWS_REGION) {
                     script {
                         // Make the deploy script executable
                         sh "chmod +x deploy.sh"

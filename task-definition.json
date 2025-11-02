@@ -1,6 +1,7 @@
 {
     "family": "task-tracker-task",
     "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::275851867352:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "task-tracker-container",
