@@ -52,7 +52,7 @@ function App() {
                         <span onClick={() => handleUpdateTask(task.id, !task.completed)}>
                             {task.title}
                         </span>
-                        <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
+                        <button onClick={() => handleDeleteTask(task.id)}>Complete</button>
                     </li>
                 ))}
             </ul>
