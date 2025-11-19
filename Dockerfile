@@ -18,11 +18,11 @@ COPY --from=build-frontend /app/frontend/dist/ /app/src/main/resources/static/
 RUN mvn package -DskipTests
 
 # Stage 3: Create the final, lean production image
-FROM openjdk:21-slim
+FROM eclipse-temurin:21-jre
 WORKDIR /app
-# Copy the executable JAR from the 'build-backend' stage
+
 COPY --from=build-backend /app/target/*.jar app.jar
-# Expose the port the application runs on
+
 EXPOSE 8080
-# Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
