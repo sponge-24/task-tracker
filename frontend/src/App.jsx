@@ -56,7 +56,7 @@ function App() {
                     </li>
                 ))}
             </ul>
-            <div>Made with sincerity by SUSA - 2025</div>
+            <div>Made with sincerity by SUSA 1- 2025</div>
         </div>
     );
 }
