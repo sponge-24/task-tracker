@@ -36,7 +36,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Task Tracker - Sudharsanan K</h1>
+            <h1>Task Tracker - SNUC</h1>
             <div className="task-input">
                 <input
                     type="text"
